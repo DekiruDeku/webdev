@@ -1,2 +1,4 @@
 # webdev
-![Image Alt Text](https://github.com/DekiruDeku/webdev/blob/main/readme/maket.pdf)
+Repository for web course
+![maket.png](https://github.com/DekiruDeku/webdev/blob/main/readme/maket.pdf)
+[https://dekirudeku.github.io/webdev/](https://github.com/DekiruDeku/webdev)
