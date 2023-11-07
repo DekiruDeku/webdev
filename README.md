@@ -1,4 +1,4 @@
 # webdev
 Repository for web course
-![maket.pdf](https://github.com/DekiruDeku/webdev/blob/main/readme/maket.pdf)
+![maket.png](https://github.com/DekiruDeku/webdev/blob/main/readme/maket.png)
 [https://dekirudeku.github.io/webdev/](https://github.com/DekiruDeku/webdev)
