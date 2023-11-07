@@ -1,0 +1,191 @@
+body {
+  background-image: -moz-repeating-linear-gradient(
+    90deg,
+    rgb(110, 110, 110),
+    50%,
+    rgb(75, 75, 75)
+  );
+}
+
+header {
+  background-color: rgb(31, 27, 27);
+  color: blanchedalmond;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 1);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100%;
+}
+h1,
+h2,
+img {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+}
+img {
+  transition: all 1s ease;
+}
+.imgLogIn {
+  max-width: 50px;
+  max-height: 50px;
+}
+.curtain-mob {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+  display: none;
+}
+.header-logo {
+  margin-right: 1%;
+  margin-left: 10px;
+  flex-grow: 0.1;
+}
+.header-pagetitle {
+  flex-grow: 6;
+}
+.header-logo,
+.header-pagetitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+.headerbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.imgConainerHeader {
+  justify-self: flex-end;
+  flex-grow: 0.1;
+}
+header img {
+  border: 2px;
+  border-color: antiquewhite;
+  border-style: solid;
+}
+
+.main-block {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  min-height: 100vh;
+}
+
+.navigation-menu {
+  margin-top: 1%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  border: 1px rgb(175, 169, 169) solid;
+}
+nav ul {
+  background-color: rgb(30, 34, 27);
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #472d2d;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+nav li:hover .submenu {
+  display: block;
+}
+
+nav ul ul {
+  margin-top: 5px;
+}
+
+.mainformation-block {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background: url("mashes\papyrus.jpg") rgba(232, 255, 128, 0.603);
+  border: 3px solid rgb(104, 17, 17);
+  padding: 10px;
+}
+
+.specials-block {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.ref-block {
+  border: 1px #472d2d;
+  max-width: 744px;
+  max-height: 1053px;
+}
+
+.misc-block {
+  margin-top: 50px;
+  border: 3px #472d2d;
+  max-width: 744px;
+  max-height: 1053px;
+}
+
+.imginextras:hover {
+  transform: scale(1.1);
+}
+
+.imginfooter {
+  margin-right: 10px;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.footerend {
+  display: flex;
+  align-items: center;
+}
+footer {
+  background-color: rgb(31, 27, 27);
+  border-top: 2px solid rgb(0, 0, 0);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 1);
+}
+.nav-menu {
+  display: none;
+}
+
+@media screen and (max-width: 810px) {
+  .navigation-menu {
+    display: none;
+  }
+
+  .main-block {
+    flex-flow: column nowrap;
+  }
+
+  .curtain-mob {
+    display: block;
+    cursor: pointer;
+  }
+}
