@@ -3,22 +3,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="randomimg.js"></script>
     <script src="scripts.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Орден</title>
   </head>
   <body>
     <header>
-      <div class="headerbar">
         <div class="header-logo">
-          <h2>Order</h2>
+          <h2>Order |</h2>
         </div>
         <div class="header-pagetitle">
           <h1>Онлайн-справочник для НРИ</h1>
         </div>
-        <div class="curtain-mob" id="menu-icon">
-          <img id="plus" src="mashes/minus.png" alt="" />
+        <div id="menu-icon">
+          <img class="curtain-mob" id="plus" src="mashes/minus.png" alt="" />
         </div>
         <nav class="nav-menu" id="nav-menu">
           <ul>
@@ -39,10 +38,9 @@
         </nav>
         <div class="imgConainerHeader">
           <a href="#">
-            <img class="imgLogIn rounded-full" src="icon.svg" alt="" />
+            <img class="imgLogIn" src="icon.svg" alt="" />
           </a>
         </div>
-      </div>
     </header>
     <main>
       <div class="main-block">
@@ -52,7 +50,7 @@
               <li><a href="#">Главная</a></li>
               <li>
                 <a href="#">Спрвочники</a>
-                <ul class="submenu border-double border-4">
+                <ul class="submenu">
                   <li><a href="#">История</a></li>
                   <li><a href="#">Мироустройство</a></li>
                   <li><a href="#">Создание персонажа</a></li>
@@ -62,7 +60,7 @@
               <li><a href="#">База Данных</a></li>
               <li>
                 <a href="#">Пользователь</a>
-                <ul class="submenu border-double border-4">
+                <ul class="submenu">
                   <li><a href="#">Coming Soon...</a></li>
                 </ul>
               </li>
@@ -76,9 +74,8 @@
             </ul>
           </nav>
         </div>
-        <div class="mainformation-block">
+        <article class="mainformation-block">
           <h3
-            class="text-decoration-line: underline text-5xl font-size 5.5rem text-center text-align: center my-2 margin-bottom: 1px;"
           >
             lorem
           </h3>
@@ -95,40 +92,34 @@
             minus placeat, sit facere repellat, dolor rerum animi nesciunt harum
             recusandae eos veniam quisquam magnam aut?
           </p>
-        </div>
-        <div class="specials-block">
-          <div
-            class="ref-block text-center text-align: center text-red-600 color: rgb(220 38 38) underline text-decoration-line: underline decoration-black text-decoration-color: #000 text-3xl font-size: 3rem decoration-4 text-decoration-thickness: 4px;"
-          >
-            <a
-              href="https://drive.google.com/file/d/1poP3zHWN6wYT9JsvcmmaO8JzP7zb4P0E/view?usp=sharing"
+        </article>
+        <aside>
+          <a
+              href="https://drive.google.com/file/d/1poP3zHWN6wYT9JsvcmmaO8JzP7zb4P0E/view?usp=sharing"target="_blank"
             >
               <img
-                class="imginextras"
+                class="ref-block imginextras"
                 src="mashes\Обложка.jpg"
                 alt="Альтернативный текст изображения"
               />
               Наш рулбук
             </a>
-          </div>
-          <div
-            class="misc-block text-center text-align: center text-green-600 color: rgb(0 38 38) underline text-decoration-line: underline decoration-black text-decoration-color: #000 text-3xl font-size: 3rem decoration-4 text-decoration-thickness: 4px;"
-          >
-            <img
-              class="imginextras2"
-              src="mashes\meme.jpg"
-              alt="Альтернативный текст изображения"
-            />
-            Мем дня
-          </div>
-        </div>
-      </div>
+
+            <a
+              href="https://drive.google.com/file/d/1poP3zHWN6wYT9JsvcmmaO8JzP7zb4P0E/view?usp=sharing"
+            >
+              <img id="randomimg"
+                class="misc-block"
+                alt="Альтернативный текст изображения"
+              />
+              Мем Дня
+            </a>
+
+        </aside>
     </main>
     <footer>
-      <div
-        class="text-white color: rgb(255 255 255) text-center text-align: center;"
-      >
-        <a class="footerend" href="https://discord.com/">
+      <div>
+        <a class="footerend" href="https://discord.com/"target="_blank">
           <img
             class="imginfooter"
             src="mashes\discord.png"
