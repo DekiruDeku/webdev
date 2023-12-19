@@ -10,11 +10,7 @@
 
     // Создать элемент для вывода статистики
     var statsElement = document.createElement("div");
-    statsElement.style.marginLeft = "10px"; // Поместить вправо
-    statsElement.style.fontSize = "0.8em"; // Уменьшить размер шрифта
-    statsElement.style.display = "flex";
-    statsElement.style.justifyContent = "flex-end";
-    statsElement.style.color = "#555";
+    statsElement.className = "timer";
 
     var statsMessage =
       "Время загрузки страницы: " + loadTime.toFixed(2) + " миллисекунд";
