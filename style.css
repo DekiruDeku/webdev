@@ -39,6 +39,7 @@ img {
   max-width: 50px;
   max-height: 50px;
   margin-top: 5px;
+  border-radius: 100%;
 }
 .curtain-mob {
   max-width: 50px;
@@ -73,6 +74,7 @@ header img {
   border: 2px;
   border-color: antiquewhite;
   border-style: solid;
+  border-radius: 100%;
 }
 
 .main-block {
@@ -211,6 +213,14 @@ footer {
 }
 .nav-menu {
   display: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a.active {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 810px) {

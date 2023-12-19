@@ -3,13 +3,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="tablepagestyle.css" />
-    <script src="randomimg.js"></script>
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="database.css" />
+    <script src="randomimg.js"></script>    
+    <script src="scripts.js"></script>  
     <script src="timer.js"></script>
     <script src="menuHighlight.js"></script>
+    <script src="generator.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Таблица</title>
+    <title>Орден</title>
   </head>
   <body>
     <header>
@@ -36,18 +37,18 @@
             <li>
               <a href="https://unicornycorny.github.io/Web/">Лист персонажа</a>
             </li>
-            <li><a href="tablepage.html">Генератор персонажа</a></li>
+            <li><a href="#">Генератор персонажа</a></li>
           </ul>
         </nav>
         <div class="imgConainerHeader">
-          <a href="#">
+          <a href="tablepage.html">
             <img class="imgLogIn" src="icon.svg" alt="" />
           </a>
         </div>
     </header>
     <main>
       <div class="main-block">
-        <div class="navigation-menu">
+        <div class="navigation-menu" id="nav-menu-secondary">
           <nav>
             <ul>
               <li><a href="index.html">Главная</a></li>
@@ -77,36 +78,18 @@
             </ul>
           </nav>
         </div>
-     <div class="grid">
-      <p class="head--level">Характеристика</p>
-      <p class="head--level">Очки Обучения</p>
-      <p class="min--level"><0</p>
-      <p class="min--level">4</p>
-      <p class="min--level">0</p>
-      <p class="min--level">6</p>
-      <p class="min--level">1</p>
-      <p class="min--level">8</p>
-      <p class="min--level">2</p>
-      <p class="min--level">10</p>
-      <p class="min--level">3</p>
-      <p class="min--level">12</p>
-      <p class="mid--level">4</p>
-      <p class="mid--level">14</p>
-      <p class="mid--level">5</p>
-      <p class="mid--level">16</p>
-      <p class="mid--level">6</p>
-      <p class="mid--level">18</p>
-      <p class="high--level">7</p>
-      <p class="high--level">20</p>
-      <p class="high--level">8</p>
-      <p class="high--level">24</p>
-      <p class="high--level">9</p>
-      <p class="high--level">28</p>
-      <p class="high--level">10</p>
-      <p class="high--level">35</p>
-      <p class="what--next">?</p>
-      <p class="what--next">?</p>
-     </div>
+        <section>
+        <div class="generatorForm">
+          <form id="characterGeneratorForm">
+            <label for="characterName">Имя персонажа:</label>
+            <input type="text" id="characterName" name="characterName" required />
+            <label for="characterClass">Класс персонажа:</label>
+            <input type="text" id="characterClass" name="characterClass" required />
+            <button type="submit">Сгенерировать</button>
+          </form>
+        </div>
+        <div id="generatorResults"></div>
+      </section>
         <aside>
           <a
               href="https://drive.google.com/file/d/1poP3zHWN6wYT9JsvcmmaO8JzP7zb4P0E/view?usp=sharing"target="_blank"

@@ -1,0 +1,123 @@
+  <html lang="ru">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="guestmembers.css" />
+      <script src="randomimg.js"></script>
+      <script src="scripts.js"></script>
+      <script src="timer.js"></script>
+      <script src="menuHighlight.js"></script>
+      <script src="network.js"></script>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Орден</title>
+    </head>
+    <body>
+      <header>
+          <div class="header-logo">
+            <h2>Order |</h2>
+          </div>
+          <div class="header-pagetitle">
+            <h1>Онлайн-справочник для НРИ</h1>
+          </div>
+          <div id="menu-icon">
+            <img class="curtain-mob" id="plus" src="mashes/minus.png" alt="" />
+          </div>
+          <nav class="nav-menu" id="nav-menu">
+            <ul>
+              <li><a href="index.html">Главная</a></li>
+              <li>
+                <a href="#">Спрвочники</a>
+              </li>
+              <li><a href="database.html">База Данных</a></li>
+              <li>
+                <a href="#">Пользователь</a>
+              </li>
+              <li><a href="guestmembers.html">Летопись</a></li>
+              <li>
+                <a href="https://unicornycorny.github.io/Web/">Лист персонажа</a>
+              </li>
+              <li><a href="#">Генератор персонажа</a></li>
+            </ul>
+          </nav>
+          <div class="imgConainerHeader">
+            <a href="tablepage.html">
+              <img class="imgLogIn" src="icon.svg" alt="" />
+            </a>
+          </div>
+      </header>
+      <main>
+        <div class="main-block">
+          <div class="navigation-menu" id="nav-menu-secondary">
+            <nav>
+              <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li>
+                  <a href="#">Спрвочники</a>
+                  <ul class="submenu">
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Мироустройство</a></li>
+                    <li><a href="#">Создание персонажа</a></li>
+                    <li><a href="#">Механики</a></li>
+                  </ul>
+                </li>
+                <li><a href="database.html">База Данных</a></li>
+                <li>
+                  <a href="#">Пользователь</a>
+                  <ul class="submenu">
+                    <li><a href="#">Coming Soon...</a></li>
+                  </ul>
+                </li>
+                <li><a href="guestmembers.html">Летопись</a></li>
+                <li>
+                  <a href="https://unicornycorny.github.io/Web/"
+                    >Лист персонажа</a
+                  >
+                </li>
+                <li><a href="tablepage.html">Генератор персонажа</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="buttonForDiv">
+          <button id="fetchDataButton">Fetch Data</button>
+          <img id="preloader" src="mashes/loading.gif"></img>
+          </div>
+          <div id="postList"></div>
+          <aside>
+            <a
+                href="https://drive.google.com/file/d/1poP3zHWN6wYT9JsvcmmaO8JzP7zb4P0E/view?usp=sharing"target="_blank"
+              >
+                <img
+                  class="ref-block imginextras"
+                  src="mashes\Обложка.jpg"
+                  alt="Альтернативный текст изображения"
+                />
+                Наш рулбук
+              </a>
+
+              <a
+                href="https://drive.google.com/file/d/1poP3zHWN6wYT9JsvcmmaO8JzP7zb4P0E/view?usp=sharing"
+              >
+                <img id="randomimg"
+                  class="misc-block"
+                  alt="Альтернативный текст изображения"
+                />
+                Мем Дня
+              </a>
+
+          </aside>
+      </main>
+      <footer>
+        <div>
+          <a class="footerend" href="https://discord.com/"target="_blank">
+            <img
+              class="imginfooter"
+              src="mashes\discord.png"
+              alt="Альтернативный текст изображения"
+            />
+            <span> Наш дискорд сервер</span>
+          </a>
+        </div>
+      </footer>
+    </body>
+  </html>

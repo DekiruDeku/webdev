@@ -1,0 +1,21 @@
+aside a {
+  white-space: pre-line;
+}
+
+#fetchDataButton {
+  align-self: center;
+}
+
+.buttonForDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+#postlist {
+  display: none;
+  border: 3px solid black;
+  background-color: rgb(210, 105, 30, 0.45);
+  margin: 15px;
+}
