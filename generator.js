@@ -10,26 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const generatedResult = `${characterName} (${characterClass})`;
 
-    const resultElement = document.createElement("div");
-    resultElement.className = "result-container";
-
-    const dataElement = document.createElement("div");
-    dataElement.textContent = generatedResult;
-
-    const deleteButton = document.createElement("img");
-    deleteButton.src = "mashes/156772.svg";
-    deleteButton.alt = "Удалить";
-    deleteButton.style.maxWidth = "15px";
-    deleteButton.style.maxHeidth = "15px";
-
-    deleteButton.addEventListener("click", function () {
-      resultElement.remove();
-      removeCharacterFromLocalStorage(generatedResult);
-    });
-
-    resultElement.appendChild(dataElement);
-    resultElement.appendChild(deleteButton);
-
+    const resultElement = createResultElement(generatedResult);
     resultsContainer.appendChild(resultElement);
 
     saveCharacterToLocalStorage(generatedResult);
@@ -57,30 +38,42 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("characters", JSON.stringify(updatedCharacters));
   }
 
+  function createResultElement(character) {
+    const resultElement = document.createElement("div");
+    resultElement.className = "result-container";
+
+    const dataElement = document.createElement("div");
+    dataElement.textContent = character;
+
+    const deleteButton = createDeleteButton(resultElement, character);
+
+    resultElement.appendChild(dataElement);
+    resultElement.appendChild(deleteButton);
+
+    return resultElement;
+  }
+
+  function createDeleteButton(resultElement, character) {
+    const deleteButton = document.createElement("img");
+    deleteButton.src = "mashes/156772.svg";
+    deleteButton.alt = "Удалить";
+    deleteButton.style.maxWidth = "15px";
+    deleteButton.style.maxHeight = "15px";
+
+    deleteButton.addEventListener("click", function () {
+      resultElement.remove();
+      removeCharacterFromLocalStorage(character);
+    });
+
+    return deleteButton;
+  }
+
   function loadCharactersFromLocalStorage() {
     const savedCharacters =
       JSON.parse(localStorage.getItem("characters")) || [];
 
     savedCharacters.forEach((character) => {
-      const resultElement = document.createElement("div");
-      resultElement.className = "result-container";
-
-      const dataElement = document.createElement("div");
-      dataElement.textContent = character;
-
-      const deleteButton = document.createElement("img");
-      deleteButton.src = "mashes/156772.svg";
-      deleteButton.alt = "Удалить";
-      deleteButton.style.maxWidth = "15px";
-      deleteButton.style.maxHeidth = "15px";
-      deleteButton.addEventListener("click", function () {
-        resultElement.remove();
-        removeCharacterFromLocalStorage(character);
-      });
-
-      resultElement.appendChild(dataElement);
-      resultElement.appendChild(deleteButton);
-
+      const resultElement = createResultElement(character);
       resultsContainer.appendChild(resultElement);
     });
   }
