@@ -253,3 +253,15 @@ nav ul li a.active {
     content: "Order";
   }
 }
+.footerend::before {
+  content: "\221E"; /* Юникод-символ бесконечности */
+  display: inline-block;
+  font-size: 20px;
+  animation: spin-infinite 2s linear infinite; /* Анимация вращения бесконечности */
+}
+
+@keyframes spin-infinite {
+  to {
+    transform: rotate(360deg);
+  }
+}
