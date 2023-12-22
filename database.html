@@ -79,17 +79,24 @@
           </nav>
         </div>
         <section>
-        <div class="generatorForm">
-          <form id="characterGeneratorForm">
-            <label for="characterName">Имя персонажа:</label>
-            <input type="text" id="characterName" name="characterName" required />
-            <label for="characterClass">Класс персонажа:</label>
-            <input type="text" id="characterClass" name="characterClass" required />
-            <button type="submit">Сгенерировать</button>
-          </form>
-        </div>
-        <div id="generatorResults"></div>
-      </section>
+          <div class="generatorForm">
+            <form id="characterGeneratorForm">
+              <label for="characterName">Имя персонажа:</label>
+              <input type="text" id="characterName" name="characterName" required />
+              <label for="characterClass">Класс персонажа:</label>
+              <input type="text" id="characterClass" name="characterClass" required />
+              <button type="submit">Сгенерировать</button>
+            </form>
+          </div>
+          <div id="generatorResults"></div>
+        </section>
+        
+        <template id="resultTemplate">
+          <div class="result-container">
+            <div class="data"></div>
+            <img class="deleteButton" src="mashes/156772.svg" alt="Удалить">
+          </div>
+        </template>
         <aside>
           <a
               href="https://drive.google.com/file/d/1poP3zHWN6wYT9JsvcmmaO8JzP7zb4P0E/view?usp=sharing"target="_blank"

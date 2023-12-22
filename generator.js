@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const generatorForm = document.getElementById("characterGeneratorForm");
   const resultsContainer = document.getElementById("generatorResults");
+  const resultTemplate = document.getElementById("resultTemplate");
 
   generatorForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -15,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     saveCharacterToLocalStorage(generatedResult);
   });
-
-  loadCharactersFromLocalStorage();
 
   function saveCharacterToLocalStorage(character) {
     const savedCharacters =
@@ -39,33 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createResultElement(character) {
-    const resultElement = document.createElement("div");
-    resultElement.className = "result-container";
+    const resultElement = document.importNode(resultTemplate.content, true);
+    resultElement.querySelector(".data").textContent = character;
 
-    const dataElement = document.createElement("div");
-    dataElement.textContent = character;
-
-    const deleteButton = createDeleteButton(resultElement, character);
-
-    resultElement.appendChild(dataElement);
-    resultElement.appendChild(deleteButton);
-
-    return resultElement;
-  }
-
-  function createDeleteButton(resultElement, character) {
-    const deleteButton = document.createElement("img");
-    deleteButton.src = "mashes/156772.svg";
-    deleteButton.alt = "Удалить";
-    deleteButton.style.maxWidth = "15px";
-    deleteButton.style.maxHeight = "15px";
-
+    const deleteButton = resultElement.querySelector(".deleteButton");
     deleteButton.addEventListener("click", function () {
+      const characterToRemove = resultElement.querySelector(".data").textContent;
+      removeCharacterFromLocalStorage(characterToRemove);
       resultElement.remove();
-      removeCharacterFromLocalStorage(character);
     });
 
-    return deleteButton;
+    return resultElement;
   }
 
   function loadCharactersFromLocalStorage() {
@@ -77,4 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
       resultsContainer.appendChild(resultElement);
     });
   }
+
+  resultsContainer.addEventListener("click", function (event) {
+    if (event.target.classList.contains("deleteButton")) {
+      const resultElement = event.target.closest(".result-container");
+      const characterToRemove = resultElement.querySelector(".data").textContent;
+      removeCharacterFromLocalStorage(characterToRemove);
+      resultElement.remove();
+    }
+  });
+
+  loadCharactersFromLocalStorage();
 });
