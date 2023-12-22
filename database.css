@@ -42,6 +42,22 @@ aside a {
   background-color: rgb(240, 255, 255, 0.603);
 }
 
+.ui-autocomplete {
+  border: rgba(0, 0, 0, 1) solid 2px;
+  max-height: 200px;
+  width: 10vw;
+  overflow: hidden;
+  background-color: rgb(78, 205, 243, 0.603);
+}
+
+.ui-menu-item {
+  border: none;
+  padding: 4px;
+  width: 10vw;
+  cursor: pointer;
+  background-color:  rgb(78, 205, 243, 0.603);
+}
+
 @media (max-width: 810px) {
   section {
     margin-left: 0;
