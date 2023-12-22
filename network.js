@@ -13,7 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const errorMessage = document.createElement("div");
     errorMessage.innerText = "⚠ Что-то пошло не так";
     errorMessage.style.color = "red";
-    document.body.appendChild(errorMessage);
+    errorMessage.style.fontSize = "2rem";
+    postList.style.display = "block";
+    const template = document.getElementById("postTemplate");
+    template.appendChild(errorMessage);
+    document.getElementById("postList").appendChild(errorMessage);
+    hidePreloader();
     console.error(error);
   }
 
@@ -21,6 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
     showPreloader();
 
     return new Promise((resolve, reject) => {
+      if (!navigator.onLine) {
+        hidePreloader();
+        reject(new Error("⚠ Отсутствует подключение к сети"));
+        return;
+      }
+
       fetch(url)
         .then((response) => {
           if (!response.ok) {
@@ -41,11 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderPosts(posts) {
     const postList = document.getElementById("postList");
-
     postList.style.display = "block";
-    posts.forEach((post) => {
-      const postElement = document.createElement("div");
-      postElement.innerHTML = `<h3>${post.title}</h3><p>${post.body}</p>`;
+
+    const template = document.getElementById("postTemplate");
+
+    const limitedPosts = posts.slice(0, 20);
+
+    limitedPosts.forEach((post) => {
+      const postElement = document.importNode(template.content, true);
+      postElement.querySelector(".postTitle").innerText = post.title;
+      postElement.querySelector(".postBody").innerText = post.body;
       postList.appendChild(postElement);
     });
   }
